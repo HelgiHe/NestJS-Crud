@@ -5,7 +5,14 @@ import { CreateTaskDto } from './dto/create-task.dto';
 
 @Injectable()
 export class TasksService {
-  private tasks: Task[] = [];
+  private tasks: Task[] = [
+    {
+      id: '1',
+      title: 'inital',
+      description: 'description',
+      status: TaskStatus.IN_PROGRESS,
+    },
+  ];
 
   getAllTasks(): Task[] {
     return this.tasks;
